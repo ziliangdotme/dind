@@ -97,3 +97,5 @@ else
 	fi
 	exec bash
 fi
+
+bash run.sh
