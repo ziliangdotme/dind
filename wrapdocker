@@ -97,8 +97,7 @@ else
 	else
 		docker -d $DOCKER_DAEMON_ARGS &
 	fi
+	exec run.sh
 	exec bash
 fi
-
-run.sh
 
