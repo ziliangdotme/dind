@@ -18,6 +18,9 @@ RUN echo deb https://get.docker.io/ubuntu docker main > /etc/apt/sources.list.d/
 ADD ./wrapdocker /usr/local/bin/wrapdocker
 RUN chmod +x /usr/local/bin/wrapdocker
 
+# Put logging to log file
+ENV LOG file
+
 # Define additional metadata for our image.
 VOLUME /var/lib/docker
 CMD ["wrapdocker"]
