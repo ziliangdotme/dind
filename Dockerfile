@@ -14,7 +14,7 @@ RUN echo deb https://get.docker.io/ubuntu docker main > /etc/apt/sources.list.d/
   && apt-get update -qq \
   && apt-get install -qqy lxc-docker > /dev/null
 
-ENV VER 7
+ENV VER 9
 
 # Install the magic wrapper.
 ADD ./wrapdocker /usr/local/bin/wrapdocker
@@ -26,6 +26,5 @@ RUN chmod +x /usr/local/bin/run.sh
 ENV LOG file
 
 # Define additional metadata for our image.
-VOLUME /var/lib/docker
 ENTRYPOINT ["wrapdocker"]
 
