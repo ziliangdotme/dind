@@ -26,5 +26,6 @@ RUN chmod +x /usr/local/bin/run.sh
 ENV LOG file
 
 # Define additional metadata for our image.
+VOLUME /var/lib/docker
 ENTRYPOINT ["wrapdocker"]
 
